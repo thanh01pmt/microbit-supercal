@@ -1,17 +1,17 @@
 input.onButtonPressed(Button.A, function () {
-    if (mode == "thapphan") {
-        mode = "nhiphan"
-        basic.showString("nhiphan")
-    } else if (mode == "nhiphan") {
-        mode = "thapphan"
-        basic.showString("thapphan")
+    if (mode == "DecMode") {
+        mode = "BinMode"
+        basic.showString("BinMode")
+    } else if (mode == "BinMode") {
+        mode = "DecMode"
+        basic.showString("DecMode")
     }
 })
 input.onButtonPressed(Button.AB, function () {
     if (number_B == 0) {
         number_B = parseFloat(temp_B)
     }
-    if (mode == "thapphan") {
+    if (mode == "DecMode") {
         if (math == "+") {
             basic.showNumber(number_A + number_B)
         } else if (math == "-") {
@@ -21,7 +21,7 @@ input.onButtonPressed(Button.AB, function () {
         } else if (math == "/") {
             basic.showNumber(number_A / number_B)
         }
-    } else if (mode == "nhiphan") {
+    } else if (mode == "BinMode") {
         let b9 = 0
         let b8 = 0
         let b7 = 0
@@ -92,8 +92,8 @@ let is_num_B_set = false
 let is_num_A_set = false
 let math = ""
 let mode = ""
-mode = "thapphan"
-basic.showString("thapphan")
+mode = "DecMode"
+basic.showString("DecMode")
 math = ""
 is_num_A_set = false
 is_num_B_set = false
